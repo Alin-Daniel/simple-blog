@@ -1,0 +1,67 @@
+.Comment--input {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.Comment--input .Input {
+    padding: 10px 0;
+}
+
+.Comment {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 20px 0;
+}
+
+.Comment--author strong {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #586069;
+}
+
+.Comment--date {
+    font-size: 13px;
+    color: #586069;
+}
+
+.Comment--content {
+    margin-top: 15px;
+}
+
+.Comment--actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Comment .Danger {
+    padding: 3px 10px;
+    margin: 5px;
+}
+
+.Comment .Success {
+    padding: 3px 10px;
+    margin: 5px;
+}
+
+
+
+ a {
+    text-decoration: none;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset:disabled {
+    opacity: 0.5;
+}

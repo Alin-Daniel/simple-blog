@@ -1,0 +1,60 @@
+.Submit {
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #24890d;
+    background-color: #24890d;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.Button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    /* font-weight: bold; */
+}
+
+.Submit:hover,
+.Submit:active {
+    color: white;
+    background-color: #41a62a;
+}
+
+.Danger{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px auto;
+    /* font-weight: bold; */
+    color: #944317;
+    display: block;
+}
+
+.Success {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px auto;
+    /* font-weight: bold; */
+    display: block;
+    color: #24890d;
+}
+
+.Submit:disabled, .Submit:disabled:hover{
+    background-color: white;
+    color: #ccc;
+    cursor: not-allowed;
+}

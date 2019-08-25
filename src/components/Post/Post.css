@@ -1,0 +1,41 @@
+.Post {
+    width: 90%;
+    padding: 0px 16px 26px 16px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    /* box-shadow: 0 2px 3px #ccc; */
+    /* border: 1px solid #eee; */
+}
+
+.Post h1 {
+    margin: 10px 0;
+    cursor: pointer;
+}
+/* .Post:hover,
+.Post:active {
+    background-color: #C0DDF5;
+} */
+
+.Post--author {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #586069;
+    /* color: #ccc; */
+}
+
+.Post--date {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 13px;
+    color: #586069;
+}
+
+.Post--counter {
+    font-size: 13px;
+    color: #586069;
+}
+

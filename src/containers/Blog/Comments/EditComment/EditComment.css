@@ -1,0 +1,51 @@
+.EditComment--input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.EditComment--input .Input {
+    padding: 10px 0;
+}
+
+.EditComment {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    /* padding: 16px; */
+    margin: 10px 0;
+}
+
+.EditActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.EditComment .Danger {
+    padding: 3px 10px;
+    margin: 5px;
+}
+
+.EditComment .Success {
+    padding: 3px 10px;
+    margin: 5px;
+}
+
+
+
+ a {
+    text-decoration: none;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset:disabled {
+    opacity: 0.5;
+}

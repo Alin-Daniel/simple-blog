@@ -1,0 +1,38 @@
+.Reply {
+    position: relative;
+    box-sizing: border-box;
+    width: 95%;
+    margin: 10px auto;
+    padding-top: 10px;
+    /* border-bottom: 1px solid #ccc; */
+    /* padding: 16px; */
+}
+
+.ReplyBody{
+    border: 1px solid #ccc;
+    border-left: 3px solid #ccc;
+}
+
+.Reply--header {
+    margin: 15px 0 0 15px;
+}
+
+.Reply--author strong{
+    font-weight: 600;
+    font-size: 14px;
+    color: #586069;
+}
+
+.Reply--date {
+    font-size: 13px;
+    color: #586069;
+}
+
+.Reply--content{
+    margin: 15px 0 0 15px;
+}
+.Reply--actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

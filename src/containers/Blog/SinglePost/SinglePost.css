@@ -1,0 +1,46 @@
+.SinglePost {
+    width: 80%;
+    margin: 20px auto 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.SinglePost--author strong {
+    font-weight: 600;
+    font-size: 14px;
+    color: #586069;
+}
+
+.SinglePost--date {
+    font-size: 13px;
+    color: #586069;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.SinglePost--counter {
+    font-size: 13px;
+    color: #586069;
+}
+
+.SinglePost--title {
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+.SinglePost .Danger{
+    margin: 0;
+    padding: 0;
+}
+.SinglePost .Success {
+    margin: 0;
+    padding: 0;
+}
+
+.SinglePost--actions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
