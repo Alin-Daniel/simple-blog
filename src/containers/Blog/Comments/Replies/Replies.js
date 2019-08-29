@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import{withRouter} from 'react-router-dom';
 import { connect } from "react-redux";
 import * as actions from "../../../../store/actions/index";
 import Button from "../../../../components/UI/Button/Button";
@@ -14,13 +15,17 @@ class Replies extends Component {
   };
  
   onReplyHandler = replyId => {
-    this.setState({reply: true});
-    this.setState({selectedReply: replyId});
+    if(this.props.token){
+      this.setState({reply: true});
+      this.setState({selectedReply: replyId});
+    } else {
+      this.props.history.push('/auth');
+    }
   }
 
   onEditHandler = replyId => {
-    this.setState({ isEditing: true });
-    this.setState({ selectedReply: replyId });
+      this.setState({ isEditing: true });
+      this.setState({ selectedReply: replyId });
   };
 
   onCancelEdit = () => {
@@ -56,7 +61,7 @@ class Replies extends Component {
                     clicked={() => this.onReplyHandler(reply.id)}
                     btnType="Success"
                   >
-                    Reply
+                   Reply
                   </Button>
                 {this.props.token && this.props.userId===reply.userId ?<Button
                     clicked={() => this.onEditHandler(reply.id)}
@@ -119,7 +124,7 @@ const mapDispatchToProps = dispatch => {
     onCreateReply: (postId, token, newComment) => dispatch(actions.createComment(postId, token, newComment))
   };
 };
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Replies);
+)(Replies));
