@@ -14,9 +14,9 @@ import postReducer from "./store/reducers/post";
 import "./index.css";
 
 const composeEnhancers =
-  process.env.NODE_ENV === "development"
+  (process.env.NODE_ENV === "development"
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    : null || compose;
+    : null) || compose;
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -31,7 +31,7 @@ const store = createStore(
 
 const app = (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename='/simple-blog'>
       <App />
     </BrowserRouter>
   </Provider>
