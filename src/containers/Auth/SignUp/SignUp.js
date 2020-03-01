@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 import Input from "../../../components/UI/Input/Input";
-import Button from "../../../components/UI/Button/Button";
+import BigButton from "../../../components/UI/Button/BigButton";
 import { checkValidity } from "../../../shared/utility";
 import * as actions from "../../../store/actions/index";
 import { connect } from "react-redux";
 import Aux from "../../../hoc/Auxiliary/Auxiliary";
-import Spinner from '../../../components/UI/Spinner/Spinner';
+import Spinner from "../../../components/UI/Spinner/Spinner";
 
 import "./SignUp.css";
 
@@ -110,12 +110,14 @@ class SignUp extends Component {
       />
     ));
 
-    if(this.props.loading){
+    if (this.props.loading) {
       form = <Spinner />;
     }
     let errorMessage = null;
     if (this.props.error) {
-      errorMessage = <p className={'SignUp--error'}>{this.props.error.message}</p>;
+      errorMessage = (
+        <p className={"SignUp--error"}>{this.props.error.message}</p>
+      );
     }
 
     return (
@@ -123,9 +125,15 @@ class SignUp extends Component {
         {errorMessage}
         <form onSubmit={event => this.formSubmitHandler(event)}>
           {form}
-          <Button btnType="Submit" disabled={!this.state.formIsValid}>
+          <BigButton
+            style={{
+              left: "50%",
+              marginTop: "30px"
+            }}
+            btnType="BigBtnSuccess"
+          >
             Submit
-          </Button>
+          </BigButton>
         </form>
       </Aux>
     );
@@ -146,7 +154,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

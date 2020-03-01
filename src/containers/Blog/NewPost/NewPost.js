@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Input from "../../../components/UI/Input/Input";
-import Button from "../../../components/UI/Button/Button";
+import BigButton from '../../../components/UI/Button/BigButton';
 import { checkValidity } from "../../../shared/utility";
 import {connect} from 'react-redux';
 import * as actions from '../../../store/actions/index';
@@ -109,12 +109,13 @@ class NewPost extends Component {
             />
           ))}
         </fieldset>
-        <Button
+        <BigButton
           disabled={!this.state.formIsValid || !this.props.token}
           btnType={"Submit"}
+          style={{transform:'none'}}
         >
           Submit
-        </Button>
+        </BigButton>
       </form>
     );
     return <div className={"NewPost--form"}>{form}</div>;

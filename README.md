@@ -1,3 +1,18 @@
+## Introduction
+Hi there! I created this simple demo application of a blog on my own. You can sign up, login/logout, you can create a new post,
+edit, or delete and you can do the same for your own comments. It also supports nested replies so you can reply to a reply and so on.
+
+## App link
+You can see this app live on Github Pages following this [link](https://alin-daniel.github.io/simple-blog/) or on Codesandbox [here](https://codesandbox.io/s/simple-blog-ibbvb)
+
+## Technologies:
+
+- ReactJS
+- Redux
+- Firebase
+- Axios
+- CSS modules
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 //import {Redirect} from 'react-router-dom';
 import Input from "../../../components/UI/Input/Input";
-import Button from "../../../components/UI/Button/Button";
+import BigButton from "../../../components/UI/Button/BigButton";
 import { checkValidity } from "../../../shared/utility";
 import { connect } from "react-redux";
 import * as actions from "../../../store/actions/index";
-import Spinner from '../../../components/UI/Spinner/Spinner';
+import Spinner from "../../../components/UI/Spinner/Spinner";
 
 import "./SignIn.css";
 
@@ -64,7 +64,6 @@ class SignIn extends Component {
       formIsValid = updatedControls[key].valid && formIsValid;
     }
     this.setState({ controls: updatedControls, formIsValid: formIsValid });
-    //console.log(this.state.controls.email.valid);
   };
 
   formSubmitHandler = event => {
@@ -75,7 +74,7 @@ class SignIn extends Component {
       this.props.isSignUp
     );
   };
-  
+
   render() {
     const elementsArray = [];
     for (let key in this.state.controls) {
@@ -96,21 +95,29 @@ class SignIn extends Component {
       />
     ));
 
-    if(this.props.loading) {
+    if (this.props.loading) {
       form = <Spinner />;
     }
-    
+
     let errorMessage = null;
-    if(this.props.error){
-      errorMessage = <p className={'SignIn--error'}>{this.props.error.message}</p>;
+    if (this.props.error) {
+      errorMessage = (
+        <p className={"SignIn--error"}>{this.props.error.message}</p>
+      );
     }
     return (
       <form onSubmit={event => this.formSubmitHandler(event)}>
         {errorMessage}
         {form}
-        <Button btnType="Submit" disabled={!this.state.formIsValid}>
+        <BigButton
+          style={{
+            left: "50%",
+            marginTop: "30px"
+          }}
+          btnType="BigBtnSuccess"
+        >
           Submit
-        </Button>
+        </BigButton>
       </form>
     );
   }
@@ -132,7 +139,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

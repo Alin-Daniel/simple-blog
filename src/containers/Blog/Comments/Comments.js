@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { withRouter } from "react-router-dom";
 import Input from "../../../components/UI/Input/Input";
-import Button from "../../../components/UI/Button/Button";
+import BigButton from '../../../components/UI/Button/BigButton';
 import { checkValidity } from "../../../shared/utility";
 import { connect } from "react-redux";
 import * as actions from "../../../store/actions/index";
@@ -83,7 +83,7 @@ class Comments extends Component {
     updatedInput.value = "";
     updatedState.comment = updatedInput;
 
-    this.setState({ formControls: updatedState });
+    this.setState({ formControls: updatedState, formIsValid: false });
   };
 
   redirectHandler = () => {
@@ -136,17 +136,18 @@ class Comments extends Component {
           ))}
         </fieldset>
         {this.props.isAuth ? (
-          <Button
+          <BigButton
             disabled={!this.state.formIsValid || !this.props.isAuth}
-            btnType="Submit"
+            btnType="BigBtnSuccess"
+            style={{left: '50%', transform:'translateX(-50%)'}}
           >
             Submit
-          </Button>
+          </BigButton>
         ) : (
           <Link to="/auth">
-            <Button clicked={this.redirectHandler} btnType="Submit">
+            <BigButton style={{left: '50%', marginTop: '20px'}} clicked={this.redirectHandler} btnType="BigBtnSuccess">
               Sign In to comment
-            </Button>
+            </BigButton>
           </Link>
         )}
       </form>
